@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormatDate from './FormatDate';
 
 class Clock extends React.Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <h2>It is <FormatDate date={this.state.date} /></h2>
             </div>
         );
     }
