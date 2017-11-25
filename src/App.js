@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Framework from './components/Framework'
 import Welcome from './components/Welcome'
-import Tick from './components/Tick'
+import Clock from './components/Clock'
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,17 +20,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">
-            Welcome to {this.frameworkInfo.name}
-          </h1>
+          <img src={logo} className="App-logo" alt="logo" />        
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p> <Framework frameworkInfo={this.frameworkInfo} /> </p>        
-        <div> <Welcome name="Daniel H. Fuzari" /> </div>        
-        <div> <Tick /> </div>        
+        <main>        
+          <Framework frameworkInfo={this.frameworkInfo} />
+          <Welcome name="Daniel H. Fuzari" />
+          <Clock />        
+        </main>
+        <footer>
+          <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
+        </footer>
       </div>
     );
   }
