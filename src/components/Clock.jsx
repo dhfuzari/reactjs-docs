@@ -4,6 +4,7 @@ import FormatDate from './FormatDate';
 class Clock extends React.Component {
     constructor(props) {
         super(props);
+        this.clickMe = this.clickMe.bind(this);
         this.state = { date: new Date() };
     }
 
@@ -18,6 +19,10 @@ class Clock extends React.Component {
         clearInterval(this.timerID);
     }
 
+    clickMe() {
+        console.log('Click me!');
+    }
+
     tick() {
         this.setState({
             date: new Date()
@@ -28,6 +33,9 @@ class Clock extends React.Component {
         return (
             <div>
                 <h2>It is <FormatDate date={this.state.date} /></h2>
+                <p>
+                    <a href="" onClick={this.clickMe}>Click me!</a>
+                </p>
             </div>
         );
     }

@@ -25,7 +25,7 @@ class App extends Component {
         <main>        
           <Framework frameworkInfo={this.frameworkInfo} />
           <Welcome name="Daniel H. Fuzari" />
-          <Clock />        
+          <Clock />                
         </main>
         <footer>
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
