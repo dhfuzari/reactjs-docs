@@ -19,8 +19,9 @@ class Clock extends React.Component {
         clearInterval(this.timerID);
     }
 
-    clickMe() {
-        console.log('Click me!');
+    clickMe(e) {
+        e.preventDefault();
+        console.log('This link was clicked!');
     }
 
     tick() {
@@ -34,7 +35,7 @@ class Clock extends React.Component {
             <div>
                 <h2>It is <FormatDate date={this.state.date} /></h2>
                 <p>
-                    <a href="" onClick={this.clickMe}>Click me!</a>
+                    <a href="#" onClick={this.clickMe}>Click me!</a>
                 </p>
             </div>
         );
