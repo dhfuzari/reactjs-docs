@@ -34,7 +34,6 @@ class LoginControl extends Component {
     }
 
     render() {
-        console.log(this.state);
         const isLoggedIn = this.state.isLoggedIn;
         let button = null;
 

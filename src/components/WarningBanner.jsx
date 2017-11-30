@@ -1,12 +1,27 @@
 import React, {Component} from 'react';
 
-function WarningBanner(props) {
-    if(!props.warn) {
-        return null;
+class WarningBanner extends Component {
+    constructor(props) {
+        super(props);
     }
-    return(
-        <h2 className="warning">Warning!</h2>
-    );
+
+    componentWillUpdate() {
+        console.log('componentWillUpdate', this.props);
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate', this.props);
+    }
+
+    render() {
+        if(!this.props.warn) {
+            return null;
+        }
+        return(
+            <h2 className="warning">Warning!</h2>
+        );
+    }
+
 }
 
 export default WarningBanner;
