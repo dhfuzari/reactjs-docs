@@ -3,6 +3,7 @@ import Framework from './components/Framework';
 import Welcome from './components/Welcome';
 import LoginControl from './components/LoginControl';
 import Clock from './components/Clock';
+import Mailbox from './components/Mailbox';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,7 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: false
+      isLoggedIn: false,
+      unreadMessages: ['React', 'Re: React', 'Re:Re: React']
     }
     this.frameworkInfo = {
       name: 'React JS',
@@ -30,6 +32,7 @@ class App extends Component {
           <Welcome name="Daniel H. Fuzari" />
           <Clock />             
           <LoginControl />
+          <Mailbox unreadMessages={this.state.unreadMessages} />
         </main>
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
