@@ -3,12 +3,8 @@ import UserGreeting from './UserGreeting';
 import GuestGreeting from './GuestGreeting';
 
 function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if(isLoggedIn) {
-        return <UserGreeting name="Daniel H. Fuzari" />
-    } else {
-        return <GuestGreeting />
-    }
+    const isLoggedIn = props.isLoggedIn;    
+    return isLoggedIn ? <UserGreeting name="Daniel H. Fuzari" /> : <GuestGreeting />        
 }
 
 export default Greeting;

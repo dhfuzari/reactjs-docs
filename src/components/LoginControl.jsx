@@ -21,7 +21,7 @@ class LoginControl extends Component {
         this.handleLogoutClick = this.handleLogoutClick.bind(this);
 
         this.state = {
-            isLoggedIn: true
+            isLoggedIn: false
         };
     }
 
