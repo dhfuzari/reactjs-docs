@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Framework from './components/Framework';
 import Welcome from './components/Welcome';
-import Greeting from './components/Greeting';
+import LoginControl from './components/LoginControl';
 import Clock from './components/Clock';
 import logo from './logo.svg';
 import './App.css';
@@ -17,12 +17,6 @@ class App extends Component {
       version: '16.1.1',
       author: 'Facebook Inc.'
     };
-
-    this.toogleIsLoggedIn = this.toogleIsLoggedIn.bind(this);
-  }
-
-  toogleIsLoggedIn() {
-    this.setState((prevState) => ({isLoggedIn: !prevState.isLoggedIn}));
   }
 
   render() {
@@ -34,11 +28,10 @@ class App extends Component {
         <main>        
           <Framework frameworkInfo={this.frameworkInfo} />
           <Welcome name="Daniel H. Fuzari" />
-          <Clock />   
-          <button onClick={this.toogleIsLoggedIn}>{this.state.isLoggedIn ? "Logout" : "Login"}</button>
-          <Greeting isLoggedIn={this.state.isLoggedIn}/>
+          <Clock />             
+          <LoginControl />
         </main>
-        <footer>
+        <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
         </footer>
       </div>
