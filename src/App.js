@@ -5,6 +5,7 @@ import LoginControl from './components/LoginControl';
 import Clock from './components/Clock';
 import Mailbox from './components/Mailbox';
 import WarningBanner from './components/WarningBanner';
+import NumbersList from './components/NumbersList';
 import logo from './logo.svg';
 import './App.css';
 
@@ -38,11 +39,12 @@ class App extends Component {
         </header>
         <main>        
           <Framework frameworkInfo={this.frameworkInfo} />
-          <Welcome name="Daniel H. Fuzari" />
+          <Welcome name="Lorem ipsum" />
           <Clock />             
           <LoginControl />
           <Mailbox unreadMessages={this.state.unreadMessages} />
           <WarningBanner warn={this.state.showWarning} />
+          <NumbersList />
           <button onClick={this.handleToggleClick}>{this.state.showWarning ? 'Hide' : 'Show'}</button>
         </main>
         <footer id="footer">

@@ -6,11 +6,11 @@ class WarningBanner extends Component {
     }
 
     componentWillUpdate() {
-        console.log('componentWillUpdate', this.props);
+        // console.log('componentWillUpdate', this.props);
     }
 
     componentDidUpdate() {
-        console.log('componentDidUpdate', this.props);
+        // console.log('componentDidUpdate', this.props);
     }
 
     render() {
