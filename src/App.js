@@ -7,6 +7,7 @@ import Mailbox from './components/Mailbox';
 import WarningBanner from './components/WarningBanner';
 import NumbersList from './components/NumbersList';
 import Blog from './components/Blog';
+import NameForm from './components/NameForm';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,7 +19,7 @@ class App extends Component {
       showWarning: false,
       posts: [
         {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-        {id: 1, title: 'Installation', content: 'You can install React from npm'}
+        {id: 2, title: 'Installation', content: 'You can install React from npm'}
       ]
     }
     this.frameworkInfo = {
@@ -52,6 +53,7 @@ class App extends Component {
           <NumbersList />
           <button onClick={this.handleToggleClick}>{this.state.showWarning ? 'Hide' : 'Show'}</button>
           <Blog posts={this.state.posts}/>
+          <NameForm />
         </main>
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>

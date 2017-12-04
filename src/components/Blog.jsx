@@ -15,12 +15,10 @@ function Blog(props) {
     );
 
     const content = props.posts.map((post) => 
-        <div>
+        <div key={post.id}>
             <h3>Content</h3>
-            <div key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.content}</p>
-            </div>
+            <h3>{post.title}</h3>
+            <p>{post.content}</p>
         </div>
     );
 
