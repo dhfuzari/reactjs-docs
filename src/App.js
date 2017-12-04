@@ -6,6 +6,7 @@ import Clock from './components/Clock';
 import Mailbox from './components/Mailbox';
 import WarningBanner from './components/WarningBanner';
 import NumbersList from './components/NumbersList';
+import Blog from './components/Blog';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,7 +15,11 @@ class App extends Component {
     super(props);
     this.state = {      
       unreadMessages: ['React', 'Re: React', 'Re:Re: React'],
-      showWarning: false
+      showWarning: false,
+      posts: [
+        {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+        {id: 1, title: 'Installation', content: 'You can install React from npm'}
+      ]
     }
     this.frameworkInfo = {
       name: 'React JS',
@@ -46,6 +51,7 @@ class App extends Component {
           <WarningBanner warn={this.state.showWarning} />
           <NumbersList />
           <button onClick={this.handleToggleClick}>{this.state.showWarning ? 'Hide' : 'Show'}</button>
+          <Blog posts={this.state.posts}/>
         </main>
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
