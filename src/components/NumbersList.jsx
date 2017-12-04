@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 
+function ListItem(props) {    
+    return (
+        <li>-> {props.value}</li>
+    );
+}
+
 function NumbersList(pros) {
     const numbers = [2, 6, 67, 5, 103];
 
     const listOfNumbers = numbers.map((item, index, arr) => {
-        return <li  key={index.toString()}>{item * item}</li>;
+        return <ListItem key={index.toString()} value={item * item} />;
     })
     return <ul>{listOfNumbers}</ul>;
 }
