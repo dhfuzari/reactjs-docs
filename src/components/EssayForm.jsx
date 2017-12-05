@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
 
-class NameForm extends React.Component {
+class EssayForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { value: ''};
+        this.state = {
+            value: 'Please, write an essay about your favorite DOM element'
+        };
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);        
     }
 
     handleChange(event) {
-        this.setState({ value: event.target.value.toUpperCase });
+        this.setState({ value: event.target.value });
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        alert('An essay was submitted: ' + this.state.value);
         event.preventDefault();
     }
+
 
     render() {
         return(
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="">
                     Name
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    <textarea type="text" value={this.state.value} onChange={this.handleChange} width="200" handleSubmit="100" />
                 </label>
                 <input type="submit" value="Submit" />
             </form>
@@ -32,4 +35,4 @@ class NameForm extends React.Component {
     }
 }
 
-export default NameForm;
+export default EssayForm;

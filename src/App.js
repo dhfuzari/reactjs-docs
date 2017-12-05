@@ -8,6 +8,7 @@ import WarningBanner from './components/WarningBanner';
 import NumbersList from './components/NumbersList';
 import Blog from './components/Blog';
 import NameForm from './components/NameForm';
+import EssayForm from './components/EssayForm';
 import logo from './logo.svg';
 import './App.css';
 
@@ -54,6 +55,7 @@ class App extends Component {
           <button onClick={this.handleToggleClick}>{this.state.showWarning ? 'Hide' : 'Show'}</button>
           <Blog posts={this.state.posts}/>
           <NameForm />
+          <EssayForm />
         </main>
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
