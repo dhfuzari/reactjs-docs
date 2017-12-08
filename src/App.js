@@ -11,6 +11,8 @@ import NameForm from './components/NameForm';
 import EssayForm from './components/EssayForm';
 import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation';
+import Calculator from './components/Calculator';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -59,7 +61,8 @@ class App extends Component {
           <NameForm />
           <EssayForm />
           <FlavorForm />
-          <Reservation />
+          <Reservation />          
+          <Calculator />
         </main>
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
