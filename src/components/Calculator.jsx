@@ -1,5 +1,5 @@
 import React from 'react';
-import BoilingVeredict from './BoilingVeredict';
+import TemperatureInput from './TemperatureInput';
 
 class Calculator extends React.Component {
     constructor(props) {
@@ -16,11 +16,10 @@ class Calculator extends React.Component {
     render() {
         const temperature = this.state.temperature;
         return(
-            <fieldset>
-                <legend>Enter temperature em celsius:</legend>
-                <input type="text" value={this.state.temperature} onChange={this.handleChange} />
-                <BoilingVeredict celsius={parseFloat(temperature)} />
-            </fieldset>
+            <div>
+                <TemperatureInput scale="c" />
+                <TemperatureInput scale="f" />
+            </div>
         );
     }
 }
