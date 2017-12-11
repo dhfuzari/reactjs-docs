@@ -49,7 +49,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />        
         </header>
         <main>        
-          <Framework frameworkInfo={this.frameworkInfo} />
+          {/* <Framework frameworkInfo={this.frameworkInfo} />
           <Welcome name="Lorem ipsum" />
           <Clock />             
           <LoginControl />
@@ -61,7 +61,8 @@ class App extends Component {
           <NameForm />
           <EssayForm />
           <FlavorForm />
-          <Reservation />          
+          <Reservation />           */}
+          <br />
           <Calculator />
         </main>
         <footer id="footer">
