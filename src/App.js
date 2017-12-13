@@ -14,6 +14,7 @@ import Reservation from './components/Reservation';
 import Calculator from './components/Calculator';
 import WelcomeDialog from './components/WelcomeDialog';
 import SplitPane from './components/SplitPane';
+import SignUpDialog from './components/SignUpDialog';
 
 import logo from './logo.svg';
 import './App.css';
@@ -72,6 +73,10 @@ class App extends Component {
             left={<Clock />}
             right={<WelcomeDialog/>}
           />
+
+          <br />
+
+          <SignUpDialog />
 
         </main>
         <footer id="footer">
