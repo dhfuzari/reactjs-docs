@@ -13,6 +13,7 @@ import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation';
 import Calculator from './components/Calculator';
 import WelcomeDialog from './components/WelcomeDialog';
+import SplitPane from './components/SplitPane';
 
 import logo from './logo.svg';
 import './App.css';
@@ -64,10 +65,13 @@ class App extends Component {
           <FlavorForm />
           <Reservation />           
           <Calculator />
-          */}
+          <WelcomeDialog/> */}
+                    
           
-          <br />
-          <WelcomeDialog/>
+          <SplitPane 
+            left={<Clock />}
+            right={<WelcomeDialog/>}
+          />
 
         </main>
         <footer id="footer">

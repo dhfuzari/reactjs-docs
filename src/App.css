@@ -34,3 +34,19 @@ form {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Custom styles */
+
+.SplitPane {
+  clear: both;
+}
+
+.SplitPane-left {
+  float: left;
+  width: 50%;
+}
+
+.SplitPane-right {
+  float: right;
+  width: 50%;
+}
