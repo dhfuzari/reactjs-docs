@@ -1,0 +1,48 @@
+import React from 'react';
+import ProductCategoryRow from './ProductCategoryRow';
+import ProductRow from './ProductRow';
+
+class ProductTable extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const rows = [];
+        let lastCategory = null;
+
+        this.props.products.forEach((product) => {
+            if(product.category !== lastCategory) {
+                rows.push(
+                    <ProductCategoryRow 
+                        key={product.category} 
+                        category={product.category} 
+                    />
+                );
+            }
+            rows.push(
+                <ProductRow 
+                    key={product.name}
+                    product={product}
+                />
+            );
+            lastCategory = product.category;
+        });
+
+        return(
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>                    
+                </thead>
+                <tbody>
+                    {rows}
+                </tbody>
+            </table>
+        );
+    }
+}
+
+export default ProductTable;
