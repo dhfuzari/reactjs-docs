@@ -84,9 +84,12 @@ class App extends Component {
           <SignUpDialog /> */}
           <FilterableProductTable products={PRODUCTS} />
         </main>
+
+        {/* 
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
-        </footer>
+        </footer> 
+        */}
       </div>
     );
   }
