@@ -1,0 +1,15 @@
+[theme='light'] {
+  border: 5px solid lightblue;
+}
+[theme='dark'] {
+  border: 5px solid black;
+}
+[theme='green'] {
+  border: 5px solid green;
+}
+[theme='red'] {
+  border: 5px solid red;
+}
+[theme='blue'] {
+  border: 5px solid blue;
+}
