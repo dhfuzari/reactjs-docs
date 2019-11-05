@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import Toolbar from './Toolbar';
 import ThemeContext from './ThemeContext';
+import contextState from './ContextState';
 import './theme.css';
-
-const stateContext = {
-  button: {
-    color: 'green',
-    text: 'My Button',
-  },
-};
 
 class ContextApp extends Component {
   state = {
-    ...stateContext,
+    ...contextState,
   };
 
   changeThemeColor = e => {
