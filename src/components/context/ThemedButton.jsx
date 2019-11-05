@@ -1,14 +1,16 @@
 import React from 'react';
+import ThemeContext from './ThemeContext';
 
 class ThemedButton extends React.Component {
   render() {
-    return;
-    <ThemeContext.Consumer>
-      <button theme={this.context}>Click-me</button>;
-    </ThemeContext.Consumer>;
+    return (
+      <ThemeContext.Consumer>
+        {context => (
+          <button theme={context.button.color}>{context.button.text}</button>
+        )}
+      </ThemeContext.Consumer>
+    );
   }
 }
-
-ThemedButton.contextType = ThemeContext;
 
 export default ThemedButton;

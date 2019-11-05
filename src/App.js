@@ -85,10 +85,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+      <React.Fragment>
         <main>
           {/* <Framework frameworkInfo={this.frameworkInfo} /> */}
           {/* <Welcome name="Lorem ipsum" /> */}
@@ -113,13 +110,12 @@ class App extends Component {
           {/* <FilterableProductTable products={PRODUCTS} /> */}
           <ContextApp />
         </main>
-
         {/*
         <footer id="footer">
           <small className="App-title">Welcome to {this.frameworkInfo.name}</small>
         </footer>
         */}
-      </div>
+      </React.Fragment>
     );
   }
 }
