@@ -17,6 +17,7 @@ import SplitPane from './components/SplitPane';
 import SignUpDialog from './components/SignUpDialog';
 import FilterableProductTable from './components/thinking-in-react/FilterableProductTable';
 import ContextApp from './components/context/ContextApp';
+import CarsWebStore from './components/cars-web-store/CarsWebStore';
 
 import logo from './logo.svg';
 import './App.css';
@@ -108,7 +109,8 @@ class App extends Component {
           /> */}
           {/* <SignUpDialog /> */}
           {/* <FilterableProductTable products={PRODUCTS} /> */}
-          <ContextApp />
+          {/* <ContextApp /> */}
+          <CarsWebStore />
         </main>
         {/*
         <footer id="footer">
